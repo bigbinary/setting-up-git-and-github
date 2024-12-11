@@ -25,7 +25,7 @@ These states are part of three sections in a Git project:
 2. Staging Area (Index): A file that tracks what will be in the next commit.
 3. Git Directory: Where Git stores our project's history and metadata.
 
-<image alt="Git basic workflow">git-basic-workflow.png</image>
+![git-basic-workflow](https://github.com/user-attachments/assets/a901eb19-5d78-4acc-a822-394f45d3b581)
 
 The workflow is simple: modify files in our working tree, stage the ones we want to commit, and then commit them. This process ensures our project's history is well organized and our changes are safely recorded.
 
