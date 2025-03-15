@@ -236,7 +236,7 @@ And it should ideally output something like this.
 Hi "your-name"! You've successfully authenticated, but GitHub does not provide shell access.
 ```
 
-### BigBinary Git Best Practices - Staging and Aliases
+### BigBinary Git Best Practices
 
 **Enforcing `git add --patch`**
 
