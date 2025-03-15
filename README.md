@@ -238,18 +238,16 @@ Hi "your-name"! You've successfully authenticated, but GitHub does not provide s
 
 ### BigBinary Git Best Practices
 
-**Enforcing `git add --patch`**
+#### Using shortcut gapa for `git add --patch`
 
-At BigBinary, we enforce using `git add --patch` to review and stage changes selectively. This helps maintain clarity in commits and avoids unrelated changes being grouped together.
+At BigBinary we don't want anyone to be using `git add .`. That should be reserved for special occassions. Similarly we don't want anyone to be using any GUI to see the diff and then to stage the diff. The BigBinary recommended way is to use `git add -patch`. If you are using
+[Oh My Zsh Git](https://github.com/ohmyzsh/ohmyzsh/blob/master/plugins/git/README.md) then the shortcut is `gapa`.
 
-**Using Aliases Consistently**
+### Using shortcut gcmsg for `git commit --message`
 
-Aliases can significantly simplify repetitive git commands. To maintain consistency across teams, we encourage setting up standard git aliases for common commands.
-
-For example:
 
 - `git add --patch` can be shortened to `gapa`.
 - `git commit --message` can be shortened to `gcmsg`.
 
-For a more comprehensive list of useful Git aliases, refer to the [Oh My Zsh Git Plugin documentation](https://github.com/ohmyzsh/ohmyzsh/blob/master/plugins/git/README.md). This resource provides a curated set of aliases to optimize your git experience.
-
+For a more comprehensive list of useful Git aliases, refer to the
+[Oh My Zsh Git Plugin documentation](https://github.com/ohmyzsh/ohmyzsh/blob/master/plugins/git/README.md)
