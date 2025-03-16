@@ -1,9 +1,7 @@
 
 ### Introduction to Git
 
-Git is a version control system. That's the official version and it's true. However we can think of Git like a time machine for our code. This is also true and this is a fun version.
-
-Git is a time machine because it allows us to track every change we make and it allows us to go to the previous version. It's not exactly like Undo in google doc but it's pretty close. After making the code change we need to commit the code. Commiting the code means in the future if I want then I can come back to this point.
+Git is a version control system. Git acts like a time machine because it allows us to track every change we make and it allows us to go to the previous version. It's not exactly like Undo in google doc but it's pretty close. After making the code change we need to commit the code. Commiting the code means in the future if I want then I can come back to this point.
 
 Besides tracking code change Git allows us to do "branching" and "merging". "Branching" allows us to duplicate the source code for yourself but in a diferent branch. So that we can make code change fearlessly.
 
@@ -54,7 +52,6 @@ git --version
 ```
 
 This command will display the version of Git installed on our Mac.
-
 
 ### Installing Git on Windows
 
@@ -123,7 +120,6 @@ This command will display the version of Git installed on our system.
 
 If you're looking for more ways to install Git on different types of Linux systems, the Git website has easy-to-follow instructions for many Linux versions. Just visit the [official Git website](https://git-scm.com/download/linux) to find them.
 
-
 ### Introduction to the init command
 
 The `git init` is a command we use to initialize git on a directory. Think of it as setting up a new directory that Git will watch over, keeping track of all the changes we make to the files inside it. We can use the `git init` command to initialize a new project or track the changes on an existing project. To do this,
@@ -136,8 +132,6 @@ The `git init` is a command we use to initialize git on a directory. Think of it
 By running the `git init` command, Git creates a hidden directory called .git in our project directory. This `.git` directory is where Git stores all the information about our project's history and changes. We will work with this directory only in rare cases, but it's important that it stays there.
 
 Now Git has been initialized inside our project directory and it will start tracking all the changes we make within the directory.
-
-
 
 ### Add SSH key to Github account
 
@@ -164,7 +158,6 @@ id_rsa.pub
 id_ecdsa.pub
 id_ed25519.pub
 ```
-
 ## No existing SSH keys
 
 If you don't already have an SSH key, you must generate a new SSH key to use for authentication.
@@ -191,7 +184,6 @@ So in the above commands, `your_email@example.com` should be replaced with the p
 
 This creates a new SSH key, using the provided email as a label.
 
-
 ## Generating public/private algorithm key pair.
 
 ```console
@@ -199,7 +191,6 @@ This creates a new SSH key, using the provided email as a label.
 ```
 
 When you are prompted to **Enter a file in which to save the key** press Enter. This accepts the default file location.
-
 
 ```console
 > Enter passphrase (empty for no passphrase): [Type a passphrase]
@@ -224,13 +215,11 @@ Follow [this detailed article by Github](https://docs.github.com/en/authenticati
 
 As to verify everything is working as intended, we can run the following in the terminal.
 
-
 ```bash
 ssh -T git@github.com
 ```
 
-
-And it should ideally output something like this.
+We should see output something like this.
 
 ```console
 Hi "your-name"! You've successfully authenticated, but GitHub does not provide shell access.
@@ -238,16 +227,13 @@ Hi "your-name"! You've successfully authenticated, but GitHub does not provide s
 
 ### BigBinary Git Best Practices
 
-#### Using shortcut gapa for `git add --patch`
+Given below are two aliases. Both of these aliases are part of
+[Oh My Zsh](https://github.com/ohmyzsh/ohmyzsh/blob/master/plugins/git/README.md).
 
-At BigBinary we don't want anyone to be using `git add .`. That should be reserved for special occassions. Similarly we don't want anyone to be using any GUI to see the diff and then to stage the diff. The BigBinary recommended way is to use `git add -patch`. If you are using
-[Oh My Zsh Git](https://github.com/ohmyzsh/ohmyzsh/blob/master/plugins/git/README.md) then the shortcut is `gapa`.
+#### Using aliase gapa for `git add --patch`
+
+At BigBinary we don't want anyone to be using `git add .`. That should be reserved for special occassions. Similarly we don't want anyone to be using any GUI to see the diff and then to stage the diff. The BigBinary recommended way is to use `git add -patch` and the alias for that is `gapa`.
 
 ### Using shortcut gcmsg for `git commit --message`
 
-
-- `git add --patch` can be shortened to `gapa`.
-- `git commit --message` can be shortened to `gcmsg`.
-
-For a more comprehensive list of useful Git aliases, refer to the
-[Oh My Zsh Git Plugin documentation](https://github.com/ohmyzsh/ohmyzsh/blob/master/plugins/git/README.md)
+In our lifetime we'll be writing a lot of git commit messages. Writing `git commit --message` could be tedious. `gcmsg` is a good alias.
