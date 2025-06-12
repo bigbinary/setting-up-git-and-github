@@ -120,6 +120,36 @@ This command will display the version of Git installed on our system.
 
 If you're looking for more ways to install Git on different types of Linux systems, the Git website has easy-to-follow instructions for many Linux versions. Just visit the [official Git website](https://git-scm.com/download/linux) to find them.
 
+### Setting your Git username for every repository on your computer
+
+You can change the name that is associated with your Git commits using the git config command. The new name you set will be visible in any future commits you push to GitHub from the command line. To set your username, run the following command in the terminal.
+
+```bash
+git config --global user.name "Mona Lisa"
+```
+
+To confirm that you have set the Git username correctly, run:
+
+```bash
+git config --global user.name
+> Mona Lisa
+```
+
+### Setting your commit email address
+
+GitHub uses your commit email address to associate commits with your account on GitHub. You can choose the email address that will be associated with the commits you push from the command line as well as web-based Git operations you make. To set your email, run the following command in the terminal.
+
+```bash
+git config --global user.email "YOUR_EMAIL"
+```
+
+To confirm that you have set the email correctly, run:
+
+```bash
+$ git config --global user.email
+email@example.com
+```
+
 ### Introduction to the init command
 
 The `git init` is a command we use to initialize git on a directory. Think of it as setting up a new directory that Git will watch over, keeping track of all the changes we make to the files inside it. We can use the `git init` command to initialize a new project or track the changes on an existing project. To do this,
